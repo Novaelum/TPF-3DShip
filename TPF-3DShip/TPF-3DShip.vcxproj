@@ -39,8 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\..\DX-Engine\src\Core;..\..\DX-Engine\src\App;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;..\..\DX-Engine\dependencies\irrKlang-1.5.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;..\..\DX-Engine\src\Core;..\..\DX-Engine\src\App;..\..\DX-Engine\dependencies\irrKlang-1.5.0\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\bart-dx-engine-e15\src\Core;..\..\bart-dx-engine-e15\src\App;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;..\..\bart-dx-engine-e15\dependencies\irrKlang-1.5.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;..\..\bart-dx-engine-e15\src\Core;..\..\bart-dx-engine-e15\src\App;..\..\bart-dx-engine-e15\dependencies\irrKlang-1.5.0\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>..\..\DX-Engine\src\Core;..\..\DX-Engine\src\App;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;..\..\DX-Engine\dependencies\irrKlang-1.5.0\include;$(IncludePath)</IncludePath>
@@ -75,16 +75,23 @@
   <ItemGroup>
     <ClCompile Include="GUtils.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="ShipRace.cpp" />
+    <ClCompile Include="TestEnvironment.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GUtils.h" />
+    <ClInclude Include="Obstacle.h" />
     <ClInclude Include="ResourceIDs.h" />
+    <ClInclude Include="Ship.h" />
+    <ClInclude Include="ShipRace.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DX-Engine\src\App\App.vcxproj">
+    <ProjectReference Include="..\..\bart-dx-engine-e15\src\App\App.vcxproj">
       <Project>{c5b44902-a125-46ca-b7f1-cd8d6a17394c}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\DX-Engine\src\Core\Core.vcxproj">
+    <ProjectReference Include="..\..\bart-dx-engine-e15\src\Core\Core.vcxproj">
       <Project>{cacb57eb-0de4-4e3f-b855-1cebd28a0c4f}</Project>
     </ProjectReference>
   </ItemGroup>

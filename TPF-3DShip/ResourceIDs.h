@@ -1,30 +1,24 @@
 #ifndef ResourcesID
 #define ResourcesID
 
-// Const path
-// Sprites
-#define spritePath	"../Assets/Sprites/"
-#define bgPath		"../Assets/Sprites/BG/"
-#define canonPath	"../Assets/Sprites/Canon/"
-#define targetPath	"../Assets/Sprites/Targets/"
-#define eventPath	"../Assets/Sprites/EventBubbles/"
-
-// Audio
-#define musicPath	"../Assets/Audio/Musics/"
-#define soundPath	"../Assets/Audio/Sounds/"
+namespace Components
+{
+	enum ID
+	{
+		UNDEFINED,
+		Ball,
+		Block,
+	};
+}
 
 namespace Texture
 {
 	enum ID
 	{
-		Background_ID,
-		Bullet_ID,
-		Canon_ID,
-		TargetOn_ID,
-		TargetOff_ID,
-		Bin_ID,
-		Bazinga_ID,
-		Boom_ID
+		ELEPHANT_DE_MER,
+		POW_POW_POW,
+		Ball,
+		Block
 	};
 }
 
@@ -32,8 +26,8 @@ namespace Sound
 {
 	enum ID
 	{
-		TestMusic_ID,
-		TestSoundFX_ID
+		TestMusicID,
+		TestSoundFXID
 	};
 }
 
