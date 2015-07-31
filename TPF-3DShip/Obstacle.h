@@ -1,10 +1,13 @@
 #pragma once
-#include "CustomModel.h"
+#include "PrimitiveModel.h"
 
-class Obstacle : CustomModel
+class Obstacle : public PrimitiveModel
 {
+public:
 public:
 	Obstacle();
 	~Obstacle();
+
+	void Update();
 };
 

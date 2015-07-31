@@ -6,6 +6,7 @@
 #include "TriGrid.h"
 #include "Ship.h"
 #include "Engine.h"
+#include "Obstacle.h"
 
 class ShipRace :
 	public Component
@@ -23,7 +24,13 @@ private:
 	Triangle* triangle;
 	Cube* cube;
 	TriGrid* triGrid;
-	Ship* ship = new Ship();
+	Obstacle* obstacle1;
+
+	//////////////////////////////////////
+	//instance of ship here to make		//
+	//sure i can use it in the update	//
+	//////////////////////////////////////
+	Ship* ship;
 	D3DXVECTOR3 posShip;
 	D3DXVECTOR3 posCam;
 	D3DXVECTOR3 targetShip;
