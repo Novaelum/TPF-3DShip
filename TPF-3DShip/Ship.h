@@ -2,8 +2,7 @@
 
 #include "PrimitiveModel.h"
 
-class Ship
-	: PrimitiveModel
+class Ship : public PrimitiveModel
 {
 public:
 	Ship();
@@ -12,8 +11,10 @@ public:
 	void Update();
 
 private:
-	float currentx, currenty, currentz;
 	const float speed = 8.0f;
+
+protected:
+	float currentx, currenty, currentz;
 
 };
 

@@ -5,6 +5,7 @@
 #include "Cube.h"
 #include "TriGrid.h"
 #include "Ship.h"
+#include "Engine.h"
 
 class ShipRace :
 	public Component
@@ -22,5 +23,9 @@ private:
 	Triangle* triangle;
 	Cube* cube;
 	TriGrid* triGrid;
+	Ship* ship = new Ship();
+	D3DXVECTOR3 posShip;
+	D3DXVECTOR3 posCam;
+	D3DXVECTOR3 targetShip;
 };
 
