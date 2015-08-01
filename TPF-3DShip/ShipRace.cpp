@@ -9,8 +9,7 @@ ShipRace::ShipRace()
 	//obstacle1 = new Obstacle();
 
 	m_player = new Ship();
-	m_triGrid = new TriGrid(100, 100, 1);
-	
+	m_triGrid = new TriGrid(100, 100, 1, true);
 }
 
 ShipRace::~ShipRace()

@@ -2,7 +2,7 @@
 
 Ship::Ship()
 	: PrimitiveModel(PrimitiveModel_Type::CONE)
-	, m_updatedPos(0.f, -5.f, -15.f)
+	, m_updatedPos(0.f, 5.f, 0.f)
 {
 	SetPosition(m_updatedPos.x, m_updatedPos.y, m_updatedPos.z);
 }
