@@ -39,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\..\bart-dx-engine-e15\src\Core;..\..\bart-dx-engine-e15\src\App;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;..\..\bart-dx-engine-e15\dependencies\irrKlang-1.5.0\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\bart-dx-engine-e15\src\App;..\..\bart-dx-engine-e15\src\Core;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;..\..\bart-dx-engine-e15\dependencies\irrKlang-1.5.0\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;..\..\bart-dx-engine-e15\src\Core;..\..\bart-dx-engine-e15\src\App;..\..\bart-dx-engine-e15\dependencies\irrKlang-1.5.0\lib\Win32-visualStudio;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -78,7 +78,7 @@
     <ClCompile Include="Obstacle.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="ShipRace.cpp" />
-    <ClCompile Include="TestEnvironment.cpp" />
+    <ClCompile Include="TitleScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GUtils.h" />
@@ -86,6 +86,7 @@
     <ClInclude Include="ResourceIDs.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="ShipRace.h" />
+    <ClInclude Include="TitleScreen.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\bart-dx-engine-e15\src\App\App.vcxproj">
