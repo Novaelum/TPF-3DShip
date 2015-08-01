@@ -2,11 +2,9 @@
 
 Ship::Ship()
 	: PrimitiveModel(PrimitiveModel_Type::CONE)
+	, m_updatedPos(0.f, -5.f, -15.f)
 {
-	currentx = 0.f;
-	currenty = 5.f;
-	currentz = 0.f;
-	SetPosition(currentx, currenty, currentz);
+	SetPosition(m_updatedPos.x, m_updatedPos.y, m_updatedPos.z);
 }
 
 Ship::~Ship()
@@ -15,20 +13,20 @@ Ship::~Ship()
 
 void Ship::Update()
 {
-	//Go Left
+	// Go Left
 	if (gDInput->keyDown(DIK_A))
-		currentx -= speed * gTimer->GetDeltaTime();
-	//Go Right
+		m_updatedPos.x -= m_speed * gTimer->GetDeltaTime();
+	// Go Right
 	if (gDInput->keyDown(DIK_D))
-		currentx += speed * gTimer->GetDeltaTime();
-	//Go Down
+		m_updatedPos.x += m_speed * gTimer->GetDeltaTime();
+	// Go Down
 	if (gDInput->keyDown(DIK_S))
-		currenty -= speed * gTimer->GetDeltaTime();
-	//Go Up
+		m_updatedPos.y -= m_speed * gTimer->GetDeltaTime();
+	// Go Up
 	if (gDInput->keyDown(DIK_W))
-		currenty += speed * gTimer->GetDeltaTime();
+		m_updatedPos.y += m_speed * gTimer->GetDeltaTime();
 
 
 	//SetRotationY(GetRotationY() + 10.f * gTimer->GetDeltaTime());	
-	this->SetPosition(currentx, currenty, currentz);
+	SetPosition(m_updatedPos.x, m_updatedPos.y, m_updatedPos.z);
 }

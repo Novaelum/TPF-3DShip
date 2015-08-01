@@ -10,11 +10,11 @@ public:
 
 	void Update();
 
-private:
-	const float speed = 8.0f;
 
-protected:
-	float currentx, currenty, currentz;
+private:
+	const float m_speed = 29.f;
+
+	D3DXVECTOR3 m_updatedPos;
 
 };
 

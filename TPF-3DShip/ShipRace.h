@@ -21,18 +21,8 @@ public:
 	void Stop();
 
 private:
-	Triangle* triangle;
-	Cube* cube;
-	TriGrid* triGrid;
-	Obstacle* obstacle1;
-
-	//////////////////////////////////////
-	//instance of ship here to make		//
-	//sure i can use it in the update	//
-	//////////////////////////////////////
-	Ship* ship;
-	D3DXVECTOR3 posShip;
-	D3DXVECTOR3 posCam;
-	D3DXVECTOR3 targetShip;
+	Obstacle* obstacle;
+	Ship* m_player;
+	TriGrid* m_triGrid;
 };
 
