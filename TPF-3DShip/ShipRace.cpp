@@ -4,7 +4,7 @@
 ShipRace::ShipRace()
 {
 	//triangle = new Triangle();
-	//cube = new Cube();
+	m_cube = new Cube();
 	//triGrid->SetPosition(5.f, 0.f, 0.f);
 	//obstacle1 = new Obstacle();
 
@@ -32,13 +32,7 @@ void ShipRace::Update()
 	// It Follows the ship		
 	D3DXVECTOR3 playerPos = m_player->GetPosition();
 	gEngine->GetCamera()->SetCamPos({ playerPos.x, playerPos.y, playerPos.z - 15 });
-	std::cout << "X " << gEngine->GetCamera()->GetCamPos().x << " Y " << gEngine->GetCamera()->GetCamPos().y << " Z " << gEngine->GetCamera()->GetCamPos().x << std::endl;
-//	gEngine->GetCamera()->SetCamtarget(playerPos); // not found
-
-
-	//static float rotation = 0;
-	//rotation += 0.00001;
-	//triGrid->SetRotation(rotation);
+	gEngine->GetCamera()->SetCameraTarget(playerPos);
 }
 
 void ShipRace::Draw()
