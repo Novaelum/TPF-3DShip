@@ -9,7 +9,7 @@ public:
 	Obstacle();
 	~Obstacle();
 
-	Collider* GetCollider() { return m_collider; }
+	CRectangle* GetCollider() { return m_collider; }
 
 	void Update();
 

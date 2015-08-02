@@ -9,7 +9,7 @@ public:
 	~Ship();
 
 	void Update();
-	void GetCollider() { m_playerCollider; }
+	CRectangle* GetCollider() { return m_playerCollider; }
 
 
 private:
