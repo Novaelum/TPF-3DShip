@@ -21,8 +21,7 @@ public:
 	void Stop();
 
 private:
-	Obstacle* obstacle;
-	Cube* m_cube;
+	Obstacle* m_cube;
 	Ship* m_player;
 	TriGrid* m_triGrid;
 };

@@ -4,7 +4,7 @@
 ShipRace::ShipRace()
 {
 	//triangle = new Triangle();
-	m_cube = new Cube();
+	m_cube = new Obstacle();
 	//triGrid->SetPosition(5.f, 0.f, 0.f);
 	//obstacle = new Obstacle();
 
@@ -34,7 +34,7 @@ void ShipRace::Update()
 	gEngine->GetCamera()->SetCameraTarget(playerPos);
 
 	//check collision
-	if (m_player->GetCollider->CollidesWith(m_cube->GetCollider->CollidesWith));
+	if (m_player->GetCollider->CollidesWith(m_cube->GetCollider()))
 		std::cout << "hello" << std::endl;
 
 

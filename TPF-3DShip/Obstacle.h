@@ -9,12 +9,12 @@ public:
 	Obstacle();
 	~Obstacle();
 
-	void GetCollider() { m_cubeCollider; }
+	Collider* GetCollider() { return m_collider; }
 
 	void Update();
 
 private:
 	D3DXVECTOR3 m_updatedPos;
-	CRectangle* m_cubeCollider;
+	CRectangle* m_collider;
 };
 
