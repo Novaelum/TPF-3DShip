@@ -1,13 +1,19 @@
 #ifndef ResourcesID
 #define ResourcesID
 
+// Const path
+// Sprites
+#define spritePath	"../Assets/Sprites/"
+
+// Audio
+#define musicPath	"../Assets/Audio/Musics/"
+#define soundPath	"../Assets/Audio/Sounds/"
+
 namespace Components
 {
 	enum ID
 	{
-		UNDEFINED,
-		Ball,
-		Block,
+		
 	};
 }
 
@@ -15,10 +21,7 @@ namespace Texture
 {
 	enum ID
 	{
-		ELEPHANT_DE_MER,
-		POW_POW_POW,
-		Ball,
-		Block
+		TitleScreen_ID
 	};
 }
 
@@ -26,8 +29,7 @@ namespace Sound
 {
 	enum ID
 	{
-		TestMusicID,
-		TestSoundFXID
+		
 	};
 }
 

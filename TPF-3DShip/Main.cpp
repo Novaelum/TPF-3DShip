@@ -2,6 +2,7 @@
 #include "App.h"
 #include "Engine.h"
 #include "ShipRace.h"
+#include "TitleScreen.h"
 
 int WINAPI _tWinMain(HINSTANCE hInstance, 
 	HINSTANCE prevHInstance, 
@@ -12,11 +13,11 @@ int WINAPI _tWinMain(HINSTANCE hInstance,
 
 	engine->Init();
 
-	ShipRace* game = new ShipRace();
+	TitleScreen* titleScreen = new TitleScreen();
 
 	int assert = gEngine->Run();
 
-	delete game;
+	gEngine->ClearComponents();
 	delete engine;
 
 	return assert;
