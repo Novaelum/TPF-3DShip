@@ -15,5 +15,6 @@ public:
 
 private:
 	Sprite* m_background;
+	bool m_deletionCalled;
 };
 

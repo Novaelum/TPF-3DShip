@@ -8,6 +8,8 @@
 #include "Engine.h"
 #include "Obstacle.h"
 
+#include "Gutils.h"
+
 class ShipRace :
 	public Component
 {

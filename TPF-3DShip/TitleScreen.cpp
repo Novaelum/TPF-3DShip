@@ -4,6 +4,7 @@
 
 TitleScreen::TitleScreen()
 	: m_background(nullptr)
+	, m_deletionCalled(false)
 {
 	Textures->LoadTexture(Texture::TitleScreen_ID, MakePath(spritePath, "TitleScreen.jpg"));
 	m_background = new Sprite(Texture::TitleScreen_ID);
@@ -17,10 +18,13 @@ void TitleScreen::Update() {
 		new ShipRace();
 		gEngine->DeleteComponent(this);
 		gEngine->DeleteComponent(m_background);
+		m_deletionCalled = true;
 	}
 }
 
 TitleScreen::~TitleScreen()
 {
-
+	// Check to avoid double delete m_background was already called for deletion in the update
+	if (!m_deletionCalled)
+		delete m_background;
 }

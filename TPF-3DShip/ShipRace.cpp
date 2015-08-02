@@ -1,5 +1,5 @@
 #include "ShipRace.h"
-#include "ResourceIDs.h"
+
 
 ShipRace::ShipRace()
 {
@@ -9,7 +9,7 @@ ShipRace::ShipRace()
 	//obstacle = new Obstacle();
 
 	m_player = new Ship();
-	m_triGrid = new TriGrid(100, 100, 1, true);
+	m_triGrid = new TriGrid(200, 200, 1, true);
 }
 ShipRace::~ShipRace()
 {
@@ -36,24 +36,6 @@ void ShipRace::Update()
 	//check collision
 	if (m_player->GetCollider()->CollidesWith(m_cube->GetCollider()))
 		std::cout << "hello" << std::endl;
-
-
-
-	//if ((playerPos.x + 1 > cubePos.x - 1) && (playerPos.x - 1 < cubePos.x + 1))
-	//{
-	//	std::cout << "touch" << std::endl;
-	//}
-	//if (playerPos.y - 1 <= cubePos.y + 1 && playerPos.y - 1 >= cubePos.y + 1)
-	//{
-	//	std::cout << "touch" << std::endl;
-	//}
-	//else
-	//{
-	//	std::cout << "no touch" << std::endl;
-	//}
-
-	//std::cout << cubePos.x << std::endl;
-	//std::cout << playerPos.x << std::endl;
 }
 
 void ShipRace::Draw()

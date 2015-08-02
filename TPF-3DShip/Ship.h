@@ -9,17 +9,19 @@ public:
 	~Ship();
 
 	void Update();
-	CRectangle* GetCollider() { return m_playerCollider; }
+	CRectangle* GetCollider() { return m_collider; }
 
 
 private:
-	const float m_speed = 29.f;
+	const float SPEED = 20.f;
+
+	// Limiters
+	const float LIMITER_SIDE	= 10.f;
+	const float LIMITER_BOTTOM	= 1.25f;
+	const float LIMITER_TOP		= 10.f;
 
 	D3DXVECTOR3 m_updatedPos;
-
-protected:
-
-	CRectangle* m_playerCollider;
+	CRectangle* m_collider;
 
 };
 

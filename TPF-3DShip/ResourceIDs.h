@@ -21,7 +21,8 @@ namespace Texture
 {
 	enum ID
 	{
-		TitleScreen_ID
+		TitleScreen_ID,
+		GameBG_ID
 	};
 }
 
