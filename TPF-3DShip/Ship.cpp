@@ -4,7 +4,7 @@ Ship::Ship()
 	: PrimitiveModel(PrimitiveModel_Type::CONE)
 	, m_updatedPos(0.f, 5.f, 0.f)
 {
-	m_collider = new CRectangle(this, m_updatedPos.x, m_updatedPos.y, 2, 2);
+	m_playerCollider = new CRectangle(this, m_updatedPos.x, m_updatedPos.y, 2, 2);
 	SetPosition(m_updatedPos.x, m_updatedPos.y, m_updatedPos.z);
 }
 

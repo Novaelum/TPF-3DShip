@@ -34,7 +34,7 @@ void ShipRace::Update()
 	gEngine->GetCamera()->SetCameraTarget(playerPos);
 
 	//check collision
-	if (m_player->GetCollider()->CollidesWith(m_cube->GetCollider()))
+	if (m_player->GetCollider()->CollidesWith(obstacle->GetCollider()))
 		std::cout << "hello" << std::endl;
 
 
