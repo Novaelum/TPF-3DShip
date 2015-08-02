@@ -20,7 +20,7 @@ public:
 private:
 	// Size const
 	const float SIZE_XYZ_MIN	= 3.f;
-	const float SIZE_XYZ_MAX	= 7.f;
+	const float SIZE_XYZ_MAX	= 5.f;
 	
 	// Z position consts
 	const float INITIAL_POSZ	= 200.f;

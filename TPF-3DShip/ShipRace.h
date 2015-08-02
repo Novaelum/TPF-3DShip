@@ -26,7 +26,7 @@ public:
 	void Reset();
 
 private:
-	const int OBSTACLE_COUNT = 15;
+	const int OBSTACLE_COUNT = 25;
 
 	void SpawnObstacles();
 	void CheckCollisions();
@@ -35,6 +35,7 @@ private:
 	Ship* m_player;
 	TriGrid* m_triGrid;
 	std::vector<Obstacle*> m_obstacles;
+	irrklang::ISoundSource* m_soundtrack;
 
 };
 

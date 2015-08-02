@@ -7,12 +7,13 @@ ShipRace::ShipRace()
 	m_player = new Ship();
 	SpawnObstacles();
 	m_triGrid = new TriGrid(200, 200, 1, true);
+	m_soundtrack = Sounds->Get(Sound::RaceTheme_ID);
 }
 
 ShipRace::~ShipRace()
 {
 	// ClearComponents called at the end handle the deletion of all elements
-	// When the scene is killed by command, once again the whole thing is handle, nothing to do here really.
+	// As for the soundtrack, irrKlang handle them itself, nothing to do here really.
 }
 
 void ShipRace::Start()
@@ -77,6 +78,8 @@ void ShipRace::Stop()
 }
 
 void ShipRace::SetAllActive() {
+	AudioSys->stopAllSounds();
+	AudioSys->play2D(m_soundtrack);
 	m_player->SetActive(true);
 	m_triGrid->SetActive(true);
 	{ auto iter = m_obstacles.begin();
@@ -86,6 +89,7 @@ void ShipRace::SetAllActive() {
 	}
 	Reset();
 	this->SetActive(true);
+	
 }
 
 void ShipRace::SetAllInactive() {

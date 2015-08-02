@@ -2,6 +2,7 @@
 #include "GUtils.h"
 #include "Component.h"
 #include "Engine.h"
+#include <irrKlang.h>
 
 class Scene : public Component
 {

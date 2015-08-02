@@ -7,15 +7,6 @@
 
 // Audio
 #define musicPath	"../Assets/Audio/Musics/"
-#define soundPath	"../Assets/Audio/Sounds/"
-
-namespace Components
-{
-	enum ID
-	{
-		
-	};
-}
 
 namespace Texture
 {
@@ -30,16 +21,10 @@ namespace Sound
 {
 	enum ID
 	{
-		
+		TitleTheme_ID,
+		DefeatTheme_ID,
+		RaceTheme_ID
 	};
 }
-
-//namespace Font
-//{
-//	enum ID
-//	{
-//		Dialog
-//	};
-//}
 
 #endif 

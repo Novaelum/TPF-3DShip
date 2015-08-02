@@ -17,6 +17,9 @@ int WINAPI _tWinMain(HINSTANCE hInstance,
 
 	Textures->LoadTexture(Texture::TitleScreen_ID, MakePath(spritePath, "TitleScreen.jpg"));
 	Textures->LoadTexture(Texture::DefeatScreen_ID, MakePath(spritePath, "DefeatScreen.jpg"));
+	Sounds->LoadSound(Sound::TitleTheme_ID, MakePath(musicPath, "TitleTheme.mp3"));
+	Sounds->LoadSound(Sound::DefeatTheme_ID, MakePath(musicPath, "DefeatTheme.mp3"));
+	Sounds->LoadSound(Sound::RaceTheme_ID, MakePath(musicPath, "RaceTheme.mp3"));
 
 	SceneManager* sceneManager = new SceneManager();
 

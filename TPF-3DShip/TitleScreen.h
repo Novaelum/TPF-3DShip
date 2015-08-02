@@ -15,6 +15,6 @@ public:
 
 private:
 	Sprite* m_background;
-
+	irrklang::ISoundSource* m_soundtrack;
 };
 
