@@ -44,14 +44,13 @@ void ShipRace::CheckCollisions() {
 	auto iter = m_obstacles.begin();
 	for (; iter != m_obstacles.end(); iter++) {
 		if (m_player->GetCollider()->CollidesWith((*iter)->GetCollider())) {
-			std::cout << "t" << std::endl;
 			// Checking z axis to confirm collision
 			float posZ = (*iter)->GetPosition().z;
 			float sizeMargin = (*iter)->GetSizeMargin();
 			// if below 0 the cube in entirely behind the player : collision impossible
 			if ((posZ + sizeMargin) > 0) {
-				if (((posZ + sizeMargin) < 6.f && (posZ + sizeMargin) > 0)		// BackCheck
-					|| ((posZ - sizeMargin) < 6.f && (posZ - sizeMargin) > 0))	// FrontCheck
+				if (((posZ + sizeMargin) < 3.f && (posZ + sizeMargin) > 0)		// BackCheck
+					|| ((posZ - sizeMargin) < 3.f && (posZ - sizeMargin) > 0))	// FrontCheck
 				{
 					Defeated();
 					break;

@@ -27,7 +27,7 @@ void Obstacle::Spawn() {
 	// Failsafe for when the obstacle is first created
 	if (m_collider) {
 		m_collider->SetPosition(GetPosition().x, GetPosition().y);
-		m_collider->SetSize(m_sizeXYZ, m_sizeXYZ);
+		m_collider->SetSize(m_sizeXYZ * 0.5f, m_sizeXYZ * 0.5f);
 	}
 }
 

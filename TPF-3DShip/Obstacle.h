@@ -10,7 +10,7 @@ public:
 	~Obstacle();
 
 	CRectangle* GetCollider()	{ return m_collider; }
-	float		GetSizeMargin()	{ return m_sizeXYZ; }
+	float		GetSizeMargin()	{ return m_sizeXYZ * 0.5; }
 	
 	void Update();
 	void Kill()					{ delete this; }
