@@ -73,17 +73,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DefeatScreen.cpp" />
     <ClCompile Include="GUtils.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="ShipRace.cpp" />
     <ClCompile Include="TitleScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DefeatScreen.h" />
     <ClInclude Include="GUtils.h" />
     <ClInclude Include="Obstacle.h" />
     <ClInclude Include="ResourceIDs.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="ShipRace.h" />
     <ClInclude Include="TitleScreen.h" />

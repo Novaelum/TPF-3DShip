@@ -1,17 +1,14 @@
 #pragma once
 
 #include "Component.h"
-#include "Triangle.h"
-#include "Cube.h"
 #include "TriGrid.h"
 #include "Ship.h"
 #include "Engine.h"
 #include "Obstacle.h"
-
+#include "Scene.h"
 #include "Gutils.h"
 
-class ShipRace :
-	public Component
+class ShipRace : public Scene
 {
 public:
 	ShipRace();
@@ -21,10 +18,23 @@ public:
 	void Update();
 	void Draw();
 	void Stop();
+	void Kill()		{ delete this; }
+
+	void SetAllActive();
+	void SetAllInactive();
+
+	void Reset();
 
 private:
-	Obstacle* m_cube;
+	const int OBSTACLE_COUNT = 15;
+
+	void SpawnObstacles();
+	void CheckCollisions();
+	void Defeated();
+
 	Ship* m_player;
 	TriGrid* m_triGrid;
+	std::vector<Obstacle*> m_obstacles;
+
 };
 

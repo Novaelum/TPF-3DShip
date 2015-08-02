@@ -9,7 +9,7 @@ public:
 	~Ship();
 
 	void Update();
-	CRectangle* GetCollider() { return m_collider; }
+	CCircle* GetCollider() { return m_collider; }
 
 
 private:
@@ -21,7 +21,7 @@ private:
 	const float LIMITER_TOP		= 10.f;
 
 	D3DXVECTOR3 m_updatedPos;
-	CRectangle* m_collider;
+	CCircle* m_collider;
 
 };
 

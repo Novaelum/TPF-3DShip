@@ -22,7 +22,7 @@ namespace Texture
 	enum ID
 	{
 		TitleScreen_ID,
-		GameBG_ID
+		DefeatScreen_ID
 	};
 }
 

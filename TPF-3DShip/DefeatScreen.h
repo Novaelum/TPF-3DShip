@@ -1,11 +1,11 @@
 #pragma once
 #include "Scene.h"
 
-class TitleScreen : public Scene
+class DefeatScreen : public Scene
 {
 public:
-	TitleScreen();
-	~TitleScreen();
+	DefeatScreen();
+	~DefeatScreen();
 
 	void Update();
 	void Kill() { delete this; }
@@ -15,6 +15,5 @@ public:
 
 private:
 	Sprite* m_background;
-
 };
 
